@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Cuaca</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="app-title">Weather Web App</h1>
+
+        <div class="search-container">
+            <input type="text" id="location-input" placeholder="Tirupati">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+            <button id="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+            <button id="current-location-btn"><i class="fas fa-location-arrow"></i> location</button>
+        </div>
+
+        <div class="loading-animation" id="loading">
+            <div class="weather-icon">
+                <div class="sun"></div>
+                <div class="cloud"></div>
+            </div>
+            <p>Memuat data cuaca...</p>
+        </div>
+
+        <div class="current-weather" id="current-weather">
+            <div class="location-date">
+                <h2 id="location">-</h2>
+                <p id="date">-</p>
+            </div>
+            <div class="weather-main">
+                <div class="temperature">
+                    <span id="temp">-</span>
+                    <span class="unit">°C</span>
+                </div>
+                <div class="conditions">
+                    <div id="weather-icon"></div>
+                    <p id="conditions">-</p>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <i class="fas fa-wind"></i>
+                    <span id="wind">- km/jam</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-tint"></i>
+                    <span id="humidity">- %</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-cloud-rain"></i>
+                    <span id="precip">- %</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hourly-forecast">
+            <h3>Prakiraan 24 Jam</h3>
+            <div class="hours-container" id="hourly-container">
+                <!-- Hourly forecast items will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
